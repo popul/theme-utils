@@ -12,8 +12,8 @@ function humanizeDuration(duration) {
    var days,
        months = duration.months(),
        years = duration.years(),
-       month_str = months > 1 ? 'months' : 'month',
-       year_str = years > 1 ? 'years' : 'year';
+       month_str = 'mois',
+       year_str = years > 1 ? 'années' : 'année';
 
     if ( months && years ) {
         return years + ' ' + year_str + ' ' + months + ' ' + month_str;
@@ -29,7 +29,7 @@ function humanizeDuration(duration) {
 
     days = duration.days();
 
-    return ( days > 1 ? days + ' days' : days + ' day' );
+    return ( days > 1 ? days + ' jours' : days + ' jour' );
 }
 
 function getDuration(start_date, end_date, humanize) {
